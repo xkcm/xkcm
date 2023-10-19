@@ -1,5 +1,14 @@
-export interface ProjectsFrontmatter {
+export interface ProjectFrontmatter {
   projectId: string;
   projectName: string;
-  description: string;
+  summary: string;
+  status: "wip" | "maintain" | "finished";
+  repo?: string;
+
+  style?: {
+    card: {
+      border: string;
+      background: string;
+    };
+  };
 }

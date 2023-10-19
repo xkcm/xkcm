@@ -1,8 +1,8 @@
 import { ContentData } from "@/types";
 import { createContentLoader } from "vitepress";
-import { ProjectsFrontmatter } from "./projects.types";
+import { ProjectFrontmatter } from "./projects.types";
 
-declare const data: ContentData<ProjectsFrontmatter>[];
+declare const data: ContentData<ProjectFrontmatter>[];
 export { data };
 
 export default createContentLoader(".vitepress/projects/*/*.md");

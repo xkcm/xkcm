@@ -2,6 +2,9 @@
 import { ref } from "vue";
 import { vIntersectionObserver } from "@vueuse/components";
 
+import { data as projects } from "@/projects/projects.data";
+import ProjectCard from "../components/ProjectCard.vue";
+
 const isSectionVisible = ref(false);
 const onVisible = ([observerEntry]) => {
   if (!isSectionVisible.value) {
@@ -19,6 +22,20 @@ const onVisible = ([observerEntry]) => {
     <div id="projects__header" :class="{ visible: isSectionVisible }">
       xkcm solutions
     </div>
+    <div id="projects__container">
+      <h3>My work</h3>
+      <div id="projects__wrapper">
+        <ProjectCard
+          v-for="project of projects"
+          :project-id="project.frontmatter.projectId"
+          :project-name="project.frontmatter.projectName"
+          :summary="project.frontmatter.summary"
+          :href="project.url"
+          :bg-color="project.frontmatter.style?.card.background"
+          :border-color="project.frontmatter.style?.card.border"
+        />
+      </div>
+    </div>
   </section>
 </template>
 
@@ -34,20 +51,30 @@ const onVisible = ([observerEntry]) => {
     padding: 1rem 2rem;
     font-size: 1.3rem;
     opacity: 0;
+    transition: opacity 300ms linear;
 
     &.visible {
       opacity: 1;
-      animation: slide-and-fade 300ms linear forwards;
     }
   }
-}
 
-@keyframes slide-and-fade {
-  0% {
-    opacity: 0;
+  &__container {
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      font-size: 1.5rem;
+    }
   }
-  100% {
-    opacity: 1;
+
+  &__wrapper {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 </style>

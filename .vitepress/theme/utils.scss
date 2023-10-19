@@ -1,3 +1,15 @@
 @function getColor($colorName, $weight: 400, $opacity: 1) {
   @return rgba(var(--clr-#{$colorName}-#{$weight}), #{$opacity});
 }
+
+@mixin useAppScrollbar {
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: getColor(background, 400);
+
+    &-thumb {
+      background-color: getColor(text);
+      border-radius: 4px;
+    }
+  }
+}

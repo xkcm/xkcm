@@ -8,7 +8,7 @@ import StarsCanvas from "../components/StarsCanvas.vue";
     <div id="landing-page__headers-wrapper">
       <h1 id="landing-page__main-header">xkcm solutions</h1>
       <h2 id="landing-page__sub-header">
-        creating highest quality software since the beginning of the universe
+        developing software out of this world
       </h2>
     </div>
   </section>
