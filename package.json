@@ -1,11 +1,17 @@
 {
   "name": "xkcm-portfolio-page",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
   },
   "keywords": [],
   "author": "xkcm",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "1.0.0-rc.22"
+  }
 }
