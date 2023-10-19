@@ -23,9 +23,13 @@ const cssVariables = computed(() =>
 
 <template>
   <article class="project-card" :style="cssVariables">
-    <h4>{{ projectName }}</h4>
+    <h4>
+      <a :href="href">{{ projectName }}</a>
+    </h4>
+
     <p>{{ summary }}</p>
-    <a :href="href">Learn more</a>
+
+    <a :href="href" tabindex="-1">Learn more</a>
   </article>
 </template>
 
@@ -39,10 +43,24 @@ const cssVariables = computed(() =>
   background-color: var(--_bg-color);
   border: 2px solid var(--_border-color);
   border-radius: 9px;
-  max-width: 600px;
+  width: 40%;
+  @media (width <= 576px) {
+    width: 80%;
+  }
+  font-size: 1em;
 
   > a {
     color: utils.getColor(blue);
+    opacity: 0.8;
+    transition: opacity 50ms linear;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  > h4 a {
+    color: utils.getColor(text);
+    text-decoration: none;
   }
 
   --_shadow-color: var(--_border-color);

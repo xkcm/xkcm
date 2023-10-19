@@ -53,20 +53,22 @@ const onVisible = ([observerEntry]) => {
     opacity: 0;
     transition: opacity 300ms linear;
 
+    @media (width <= 576px) {
+      text-align: center;
+    }
+
     &.visible {
       opacity: 1;
     }
   }
 
   &__container {
-    padding: 1rem 2rem;
+    padding: 1rem 0;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
     h3 {
       font-size: 1.5rem;
+      text-align: center;
     }
   }
 
@@ -74,6 +76,7 @@ const onVisible = ([observerEntry]) => {
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
   }
 }

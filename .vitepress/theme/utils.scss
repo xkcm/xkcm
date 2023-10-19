@@ -5,7 +5,7 @@
 @mixin useAppScrollbar {
   &::-webkit-scrollbar {
     width: 10px;
-    background-color: getColor(background, 400);
+    background-color: getColor(background, 300);
 
     &-thumb {
       background-color: getColor(text);

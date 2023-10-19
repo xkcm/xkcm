@@ -47,6 +47,7 @@ body {
   width: 100%;
   height: 100svh;
   overflow-y: auto;
+  overflow-x: hidden;
   scroll-snap-type: y proximity;
   filter: blur(0);
   transition: filter 100ms linear;

@@ -63,17 +63,24 @@ onClickOutside(container, close);
     left: 0;
     top: 0;
     color: utils.getColor(text);
-    padding: 100px 0;
+    padding: 2em;
     box-sizing: border-box;
     overflow: auto;
     @include utils.useAppScrollbar;
+    @media (width <= 576px) {
+      padding: 10px;
+    }
   }
 
   &__container {
     margin: 0 auto;
     padding: 1rem 2rem;
     background-color: utils.getColor(background, 200);
-    width: 50%;
+    width: 60%;
+    @media (width <= 576px) {
+      width: 100%;
+    }
+
     min-height: 100%;
     border-radius: 4px;
     box-sizing: border-box;
