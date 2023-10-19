@@ -6,12 +6,19 @@
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "prettier": "pnpm exec prettier .vitepress --write || true"
   },
   "keywords": [],
   "author": "xkcm",
   "license": "ISC",
   "devDependencies": {
-    "vitepress": "1.0.0-rc.22"
+    "@types/node": "^20.8.7",
+    "@vueuse/components": "^10.5.0",
+    "@vueuse/core": "^10.5.0",
+    "prettier": "^3.0.3",
+    "sass": "^1.69.4",
+    "vitepress": "1.0.0-rc.22",
+    "vue": "^3.3.4"
   }
 }

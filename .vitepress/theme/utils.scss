@@ -1,0 +1,3 @@
+@function getColor($colorName, $weight: 400, $opacity: 1) {
+  @return rgba(var(--clr-#{$colorName}-#{$weight}), #{$opacity});
+}

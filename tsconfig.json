@@ -1,0 +1,12 @@
+{
+  "include": [".vitepress/**/*"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "module": "ES2020",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "@/*": ["./.vitepress/*"]
+    }
+  }
+}
