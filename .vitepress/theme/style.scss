@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap");
+
+:root {
+  --clr-background-400: 0, 4, 17;
+  --clr-background-300: 0, 8, 29;
+  --clr-background-200: 13, 24, 28;
+  --clr-background-100: 19, 36, 42;
+  --clr-text-400: 255, 255, 255;
+  --clr-blue-400: 99, 159, 243;
+
+  --clr-card-bg-400: 5, 15, 34;
+  --clr-card-border-400: 10, 20, 39;
+}
+
+html {
+  font-family:
+    Roboto Mono,
+    Arial,
+    Helvetica;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.full-size {
+  width: 100%;
+  height: 100svh;
+}
