@@ -9,6 +9,7 @@ export default defineConfig({
   title: "xkcm portfolio",
   description: "A Portfolio Page of xkcm solutions",
   srcDir: ".vitepress",
+  base: "/xkcm/",
   vite: {
     resolve: {
       alias: {
