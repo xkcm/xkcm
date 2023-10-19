@@ -24,7 +24,7 @@ const statusCaption = computed(
     })[status],
 );
 
-onKeyUp("Escape", close, { target: document });
+onKeyUp("Escape", close);
 onClickOutside(container, close);
 </script>
 

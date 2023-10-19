@@ -1,10 +1,5 @@
-<script setup lang="ts">
-import StarsCanvas from "../components/StarsCanvas.vue";
-</script>
-
 <template>
   <section id="landing-page" class="full-size">
-    <StarsCanvas />
     <div id="landing-page__headers-wrapper">
       <h1 id="landing-page__main-header">xkcm solutions</h1>
       <h2 id="landing-page__sub-header">
@@ -23,11 +18,13 @@ import StarsCanvas from "../components/StarsCanvas.vue";
   place-items: center;
   position: relative;
 
-  background: linear-gradient(
-    180deg,
-    utils.getColor(background, 400),
-    utils.getColor(background, 300) 50%
-  );
+  background: url("@/theme/assets/sky-bg.png"),
+    linear-gradient(
+      180deg,
+      utils.getColor(background, 400),
+      utils.getColor(background, 300) 50%
+    );
+  background-size: cover;
 
   &__headers-wrapper {
     min-width: 70%;

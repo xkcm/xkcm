@@ -48,13 +48,9 @@ body {
   height: 100svh;
   overflow-y: auto;
   overflow-x: hidden;
-  scroll-snap-type: y proximity;
   filter: blur(0);
   transition: filter 100ms linear;
-
-  .full-size {
-    scroll-snap-align: start;
-  }
+  background-color: utils.getColor(background);
 
   @include utils.useAppScrollbar;
 

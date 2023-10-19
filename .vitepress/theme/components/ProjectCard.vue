@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { omitNil } from "../helpers/object";
-import { ProjectFrontmatter } from "@/projects/projects.types";
 
 const { bgColor, borderColor } = defineProps<{
   projectId: string;
@@ -37,16 +36,11 @@ const cssVariables = computed(() =>
 @use "@/theme/utils.scss";
 
 .project-card {
-  --_bg-color: var(--bg-color, #{utils.getColor(background, 200)});
-  --_border-color: var(--border-color, #{utils.getColor(background, 100)});
-  padding: 0.8rem 1rem;
+  --_bg-color: var(--bg-color, #{utils.getColor(card-bg)});
+  --_border-color: var(--border-color, #{utils.getColor(card-border)});
+  padding: 1.4rem 2rem;
   background-color: var(--_bg-color);
   border: 2px solid var(--_border-color);
-  border-radius: 9px;
-  width: 40%;
-  @media (width <= 576px) {
-    width: 80%;
-  }
   font-size: 1em;
 
   > a {
@@ -63,10 +57,6 @@ const cssVariables = computed(() =>
     text-decoration: none;
   }
 
-  --_shadow-color: var(--_border-color);
-  box-shadow:
-    0 0 2px 0 var(--_shadow-color),
-    0 0 4px 0 var(--_shadow-color),
-    0 0 6px 0 var(--_shadow-color);
+  box-shadow: 0 0 2px 0 var(--_border-color) inset;
 }
 </style>
