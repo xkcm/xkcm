@@ -23,7 +23,7 @@ const onVisible = ([observerEntry]) => {
       xkcm solutions
     </div>
     <div id="projects__container">
-      <h3>My work</h3>
+      <h3>My projects</h3>
       <div id="projects__wrapper">
         <ProjectCard
           v-for="project of projects"
@@ -89,7 +89,7 @@ const onVisible = ([observerEntry]) => {
     width: 40%;
     height: 100%;
     overflow: auto;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
     @include utils.useAppScrollbar;
     @media (width <= 576px) {
       width: 80%;

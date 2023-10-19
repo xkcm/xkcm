@@ -4,7 +4,7 @@ title: Memento
 projectId: memento
 projectName: Memento
 summary: Simple TypeScript library for quick and easy memoization
-status: maintain
+status: maintained
 repo: https://github.com/xkcm/memento
 ---
 
@@ -19,3 +19,7 @@ This library supports:
 - writing custom storage interfaces for storing memoized results
 
 Read full documentation at [xkcm.github.io/memento](https://xkcm.github.io/memento)
+
+## Techstack
+
+Library was created in TypeScript. Tests were written using `vitest`.

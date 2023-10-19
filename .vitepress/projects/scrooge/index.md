@@ -3,7 +3,7 @@ title: Scrooge
 
 projectId: scrooge
 projectName: Scrooge
-summary: Financial tracking app
+summary: Financial tracking app built with Vue and TypeScript
 status: wip
 ---
 

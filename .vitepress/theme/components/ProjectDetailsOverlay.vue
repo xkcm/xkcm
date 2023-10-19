@@ -18,9 +18,10 @@ const close = () => router.go("/projects/");
 const statusCaption = computed(
   () =>
     ({
-      maintain: "Maintained",
+      maintained: "Maintained",
       wip: "In Progress",
       finished: "Finished",
+      paused: "Paused",
     })[status],
 );
 
