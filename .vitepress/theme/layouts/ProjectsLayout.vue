@@ -30,7 +30,7 @@ const onVisible = ([observerEntry]) => {
           :project-id="project.frontmatter.projectId"
           :project-name="project.frontmatter.projectName"
           :summary="project.frontmatter.summary"
-          :href="project.url"
+          :href="'/xkcm' + project.url"
           :bg-color="project.frontmatter.style?.card.background"
           :border-color="project.frontmatter.style?.card.border"
         />

@@ -14,7 +14,7 @@ const { status } = defineProps<{
 const container = ref<HTMLElement>(null);
 const router = useRouter();
 
-const close = () => router.go("/projects/");
+const close = () => router.go("/xkcm/projects/");
 const statusCaption = computed(
   () =>
     ({
@@ -32,7 +32,7 @@ onClickOutside(container, close);
 <template>
   <div id="project-details__layout" class="full-size">
     <article id="project-details__container" ref="container">
-      <a href="/projects/">&lt; Go back to projects</a>
+      <a href="/xkcm/projects/">&lt; Go back to projects</a>
 
       <h2>{{ projectName }}</h2>
 
