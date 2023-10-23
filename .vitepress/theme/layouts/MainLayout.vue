@@ -13,8 +13,7 @@ onMounted(() => {
     frontmatter.value.scrollTo || (frontmatter.value.projectId && "#projects");
 
   if (scrollToSelector) {
-    const el = document.querySelector(scrollToSelector);
-    el.scrollIntoView();
+    document.querySelector(scrollToSelector).scrollIntoView();
   }
 });
 </script>
@@ -51,11 +50,16 @@ body {
   filter: blur(0);
   transition: filter 100ms linear;
   background-color: utils.getColor(background);
+  scroll-snap-type: y proximity;
 
   @include utils.useAppScrollbar;
 
   &.project-details-open {
     filter: blur(5px);
+  }
+
+  .full-size {
+    scroll-snap-align: start;
   }
 }
 </style>

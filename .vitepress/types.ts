@@ -1,8 +1,5 @@
-export interface ContentData<T = Record<string, any>> {
-  url: string;
-  frontmatter: T;
+import { ContentData } from "vitepress";
 
-  src?: string;
-  html?: string;
-  excerpt?: string;
+export interface LocalContentData<T = Record<string, any>> extends ContentData {
+  frontmatter: T;
 }
