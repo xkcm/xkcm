@@ -19,9 +19,9 @@ const onVisible = ([observerEntry]) => {
     class="full-size"
     v-intersection-observer="[onVisible, { threshold: 1 }]"
   >
-    <div id="projects__header" :class="{ visible: isSectionVisible }">
+    <header id="projects__header" :class="{ visible: isSectionVisible }">
       xkcm solutions
-    </div>
+    </header>
     <div id="projects__container">
       <h3>My projects</h3>
       <div id="projects__wrapper">

@@ -1,15 +1,22 @@
+@use "sass:math";
+
 @function getColor($colorName, $weight: 400, $opacity: 1) {
   @return rgba(var(--clr-#{$colorName}-#{$weight}), #{$opacity});
 }
 
-@mixin useAppScrollbar {
+@mixin useAppScrollbar($width: 10px, $mobileWidth: 6px) {
+  --p-width: #{$width};
+  @media (width <= 576px) {
+    --p-width: #{$mobileWidth};
+  }
+
   &::-webkit-scrollbar {
-    width: 10px;
+    width: var(--p-width);
     background-color: transparent;
 
     &-thumb {
       background-color: getColor(text);
-      border-radius: 4px;
+      border-radius: calc(var(--p-width) / 2);
     }
   }
 }

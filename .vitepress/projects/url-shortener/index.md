@@ -3,7 +3,7 @@ title: Url Shortener
 
 projectId: urlShortener
 projectName: Url Shortener
-summary: URL shortening web service built in TypeScript
+summary: URL shortening app built in TypeScript
 status: finished
 repo: https://github.com/xkcm/url-shortener
 ---
